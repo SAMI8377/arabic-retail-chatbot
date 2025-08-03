@@ -1,0 +1,84 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thank_you
+  - ask_product_availability
+  - provide_product_name
+  - ask_store_hours
+  - ask_location
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - general_question
+  - chitchat
+  - out_of_scope
+
+entities:
+  - product
+
+sessions:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+
+responses:
+  utter_greet:
+  - text: "مرحبا! كيف يمكنني مساعدتك اليوم؟"
+  - text: "أهلاً بك! ما الذي تبحث عنه؟"
+
+  utter_goodbye:
+  - text: "مع السلامة!"
+  - text: "إلى اللقاء!"
+
+  utter_iamabot:
+  - text: "أنا روبوت، تم تدريبي بواسطة الذكاء الاصطناعي."
+
+  utter_happy:
+  - text: "رائع!"
+
+  utter_cheer_up:
+  - text: "ابتهج!"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "هل ساعدك هذا؟"
+
+  utter_unhappy:
+  - text: "أنا آسف لسماع ذلك. هل يمكنني فعل أي شيء آخر؟"
+
+  utter_ask_product_availability:
+  - text: "ما هو المنتج الذي تبحث عنه؟"
+
+  utter_product_not_found:
+  - text: "عذراً، لا يبدو أن {product} متوفر حالياً. هل تبحث عن شيء آخر؟"
+
+  utter_product_available:
+  - text: "نعم، {product} متوفر حالياً. هل ترغب في معرفة المزيد؟"
+
+  utter_store_hours:
+  - text: "نحن نفتح من الساعة 9 صباحاً حتى 9 مساءً يومياً."
+
+  utter_location:
+  - text: "يمكنك العثور علينا في [عنوان المتجر]. هل تحتاج إلى الاتجاهات؟"
+
+  utter_general_question:
+  - text: "هذا سؤال جيد! دعني أساعدك بأفضل ما أستطيع."
+  - text: "سأحاول الإجابة على سؤالك."
+
+  utter_chitchat:
+  - text: "أحب الدردشة معك! كيف يمكنني مساعدتك اليوم؟"
+  - text: "أنا هنا للمساعدة. ما الذي تود معرفته؟"
+
+  utter_out_of_scope:
+  - text: "عذراً، هذا خارج نطاق خبرتي. هل يمكنني مساعدتك بشيء آخر متعلق بالمتجر؟"
+  - text: "لا أستطيع الإجابة على هذا السؤال، لكن يمكنني مساعدتك بأسئلة حول منتجاتنا ومتجرنا."
+
+  utter_default:
+  - text: "عذراً، لم أفهم. هل يمكنك إعادة صياغة سؤالك؟"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

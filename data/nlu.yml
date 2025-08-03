@@ -1,0 +1,106 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - مرحبا
+    - اهلا
+    - السلام عليكم
+    - كيف حالك
+    - صباح الخير
+    - مساء الخير
+
+- intent: goodbye
+  examples: |
+    - مع السلامة
+    - الى اللقاء
+    - وداعا
+    - مع السلامه
+
+- intent: affirm
+  examples: |
+    - نعم
+    - صحيح
+    - بالتأكيد
+    - اكيد
+
+- intent: deny
+  examples: |
+    - لا
+    - ليس صحيحا
+    - مستحيل
+    - لا اعتقد
+
+- intent: thank_you
+  examples: |
+    - شكرا
+    - شكرا جزيلا
+    - مشكور
+    - جزاك الله خيرا
+
+- intent: ask_product_availability
+  examples: |
+    - هل [القميص](product) متوفر؟
+    - هل لديكم [فستان](product)؟
+    - اريد ان اعرف اذا كان [الحذاء](product) موجودا
+    - هل [هذا المنتج](product) متوفر؟
+
+- intent: provide_product_name
+  examples: |
+    - ابحث عن [قميص](product)
+    - اريد [فستان](product) احمر
+    - [بنطلون](product) جينز
+    - هل لديكم [ساعة](product)؟
+
+- intent: ask_store_hours
+  examples: |
+    - متى تفتحون؟
+    - ما هي ساعات العمل؟
+    - متى تغلقون؟
+    - مواعيد العمل
+
+- intent: ask_location
+  examples: |
+    - اين موقعكم؟
+    - ما هو عنوان المتجر؟
+    - هل لديكم فروع اخرى؟
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

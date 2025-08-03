@@ -1,0 +1,37 @@
+# The config recipe to choose. Default is default.v1
+recipe: default.v1
+
+# Configuration for Rasa NLU. The pipeline and language code will be set here.
+language: ar  # Arabic language
+
+pipeline:
+  # Simple but effective pipeline for Arabic
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: faq
+    constrain_similarities: true
+
+# Configuration for Rasa Core. Policies are set here.
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true
+assistant_id: 20250803-202525-acute-transfer

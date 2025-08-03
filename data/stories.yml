@@ -1,0 +1,72 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - story: ask product availability
+    steps:
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
+      - intent: provide_product_name
+        entities:
+          - product: "قميص"
+      - action: utter_product_available
+
+  - story: ask product availability - product not found
+    steps:
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
+      - intent: provide_product_name
+        entities:
+          - product: "فستان"
+      - action: utter_product_not_found
+
+  - story: ask store hours
+    steps:
+      - intent: ask_store_hours
+      - action: utter_store_hours
+
+  - story: ask location
+    steps:
+      - intent: ask_location
+      - action: utter_location
+
+  - story: thank you
+    steps:
+      - intent: thank_you
+      - action: utter_goodbye
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye

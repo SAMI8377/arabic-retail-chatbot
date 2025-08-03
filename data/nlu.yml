@@ -8,6 +8,16 @@ nlu:
     - كيف حالك
     - صباح الخير
     - مساء الخير
+    - هاي
+    - هلا
+    - اهلا وسهلا
+    - مرحبتين
+    - يا هلا
+    - كيفك
+    - شلونك
+    - اهلين
+    - حياك الله
+    - نورت
 
 - intent: goodbye
   examples: |
@@ -15,6 +25,14 @@ nlu:
     - الى اللقاء
     - وداعا
     - مع السلامه
+    - باي
+    - تصبح على خير
+    - الله يعطيك العافية
+    - شكرا والى اللقاء
+    - بس كده
+    - خلاص
+    - يعطيك العافية
+    - تسلم
 
 - intent: affirm
   examples: |
@@ -22,6 +40,16 @@ nlu:
     - صحيح
     - بالتأكيد
     - اكيد
+    - طبعا
+    - ايوة
+    - اه
+    - صح
+    - ماشي
+    - موافق
+    - تمام
+    - اوكي
+    - زين
+    - حلو
 
 - intent: deny
   examples: |
@@ -29,6 +57,14 @@ nlu:
     - ليس صحيحا
     - مستحيل
     - لا اعتقد
+    - مش صح
+    - غلط
+    - لأ
+    - ما اعتقد
+    - مش موافق
+    - لا شكرا
+    - مش محتاج
+    - مش عايز
 
 - intent: thank_you
   examples: |
@@ -36,6 +72,14 @@ nlu:
     - شكرا جزيلا
     - مشكور
     - جزاك الله خيرا
+    - الله يعطيك العافية
+    - تسلم
+    - يعطيك العافية
+    - مشكور جدا
+    - شكرا كتير
+    - ربنا يخليك
+    - الله يجزيك خير
+    - ممتن لك
 
 - intent: ask_product_availability
   examples: |
@@ -43,6 +87,17 @@ nlu:
     - هل لديكم [فستان](product)؟
     - اريد ان اعرف اذا كان [الحذاء](product) موجودا
     - هل [هذا المنتج](product) متوفر؟
+    - عندكم [بنطلون](product)؟
+    - موجود [جاكيت](product)؟
+    - هل يوجد [ساعة](product)؟
+    - ابحث عن [حقيبة](product)
+    - اريد [عطر](product)
+    - هل متوفر [نظارة](product)؟
+    - عايز [تيشيرت](product)
+    - محتاج [شنطة](product)
+    - فيه [جزمة](product)؟
+    - موجود عندكم [كاب](product)؟
+    - هل لديكم [اكسسوارات](product)؟
 
 - intent: provide_product_name
   examples: |
@@ -50,6 +105,16 @@ nlu:
     - اريد [فستان](product) احمر
     - [بنطلون](product) جينز
     - هل لديكم [ساعة](product)؟
+    - [حذاء](product) رياضي
+    - [جاكيت](product) شتوي
+    - [حقيبة](product) يد
+    - [عطر](product) رجالي
+    - [نظارة](product) شمسية
+    - [تيشيرت](product) قطني
+    - [شنطة](product) سفر
+    - [جزمة](product) كلاسيك
+    - [كاب](product) رياضي
+    - [اكسسوارات](product) نسائية
 
 - intent: ask_store_hours
   examples: |
@@ -57,50 +122,113 @@ nlu:
     - ما هي ساعات العمل؟
     - متى تغلقون؟
     - مواعيد العمل
+    - ايه مواعيد الشغل؟
+    - امتى بتفتحوا؟
+    - امتى بتقفلوا؟
+    - ساعات الدوام
+    - اوقات العمل
+    - متى المحل مفتوح؟
+    - ايه اوقات الفتح؟
+    - بتشتغلوا امتى؟
+    - المحل مفتوح كام ساعة؟
 
 - intent: ask_location
   examples: |
     - اين موقعكم؟
     - ما هو عنوان المتجر؟
     - هل لديكم فروع اخرى؟
+    - وين المحل؟
+    - فين مكانكم؟
+    - ايه العنوان؟
+    - عندكم فروع تانية؟
+    - اقرب فرع فين؟
+    - كيف اوصل لكم؟
+    - المحل في اي منطقة؟
+    - عايز اعرف المكان
+    - ممكن العنوان؟
+    - فين اقرب محل؟
 
 - intent: mood_great
   examples: |
+    - ممتاز
+    - رائع
+    - جميل جدا
+    - احسن ما يكون
+    - تمام التمام
+    - الحمد لله كويس
+    - كله تمام
+    - زي الفل
+    - احلى ما يكون
     - perfect
     - great
     - amazing
-    - feeling like a king
     - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - fantastic
+    - excellent
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
+    - مش كويس
+    - تعبان
+    - زعلان
+    - مضايق
+    - مش في المود
+    - يوم وحش
+    - مكسوف
+    - زهقان
     - sad
-    - very sad
     - unhappy
     - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - feeling bad
+    - disappointed
+    - upset
 
 - intent: bot_challenge
   examples: |
+    - هل انت روبوت؟
+    - انت انسان؟
+    - هل انت بوت؟
+    - انت ذكي اصطناعي؟
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: general_question
+  examples: |
+    - ممكن تساعدني؟
+    - عايز اسأل سؤال
+    - عندي استفسار
+    - ممكن معلومة؟
+    - اقدر اعرف؟
+    - ايه اللي تقدر تعمله؟
+    - بتعمل ايه؟
+    - ممكن تفيدني؟
+    - محتاج مساعدة
+    - عايز اعرف حاجة
+
+- intent: chitchat
+  examples: |
+    - ازيك؟
+    - عامل ايه؟
+    - اخبارك ايه؟
+    - كيف الحال؟
+    - شو اخبارك؟
+    - كيفك؟
+    - ايش اخبارك؟
+    - how are you?
+    - what's up?
+    - how's it going?
+
+- intent: out_of_scope
+  examples: |
+    - ايه حالة الطقس؟
+    - كام الساعة؟
+    - فين اقرب مطعم؟
+    - ازاي اروح المطار؟
+    - ايه اخبار الرياضة؟
+    - what's the weather?
+    - what time is it?
+    - tell me a joke
+    - sing a song
+    - what's the news?

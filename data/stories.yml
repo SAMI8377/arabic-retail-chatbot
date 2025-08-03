@@ -1,14 +1,58 @@
 version: "3.1"
 
 stories:
-  - story: happy path
+  - story: greet and ask product
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
+      - intent: provide_product_name
+        entities:
+          - product: "قميص"
+      - action: utter_product_available
+      - intent: thank_you
+      - action: utter_goodbye
+
+  - story: greet and ask store hours
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_store_hours
+      - action: utter_store_hours
+      - intent: thank_you
+      - action: utter_goodbye
+
+  - story: greet and ask location
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_location
+      - action: utter_location
+      - intent: affirm
+      - action: utter_happy
+
+  - story: product not available
+    steps:
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
+      - intent: provide_product_name
+        entities:
+          - product: "فستان"
+      - action: utter_product_not_found
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: happy customer
     steps:
       - intent: greet
       - action: utter_greet
       - intent: mood_great
       - action: utter_happy
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
 
-  - story: sad path 1
+  - story: unhappy customer support
     steps:
       - intent: greet
       - action: utter_greet
@@ -18,55 +62,55 @@ stories:
       - intent: affirm
       - action: utter_happy
 
-  - story: sad path 2
+  - story: chitchat flow
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: deny
-      - action: utter_goodbye
-
-  - story: bot challenge
-    steps:
-      - intent: bot_challenge
-      - action: utter_iamabot
-
-  - story: ask product availability
-    steps:
-      - intent: ask_product_availability
-      - action: utter_ask_product_availability
-      - intent: provide_product_name
-        entities:
-          - product: "قميص"
-      - action: utter_product_available
-
-  - story: ask product availability - product not found
-    steps:
-      - intent: ask_product_availability
-      - action: utter_ask_product_availability
-      - intent: provide_product_name
-        entities:
-          - product: "فستان"
-      - action: utter_product_not_found
-
-  - story: ask store hours
-    steps:
+      - intent: chitchat
+      - action: utter_chitchat
       - intent: ask_store_hours
       - action: utter_store_hours
 
-  - story: ask location
+  - story: general question flow
     steps:
-      - intent: ask_location
-      - action: utter_location
+      - intent: general_question
+      - action: utter_general_question
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
 
-  - story: thank you
+  - story: bot challenge flow
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
+
+  - story: out of scope handling
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+      - intent: ask_store_hours
+      - action: utter_store_hours
+
+  - story: multiple product inquiry
+    steps:
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
+      - intent: provide_product_name
+        entities:
+          - product: "حذاء"
+      - action: utter_product_available
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
+      - intent: provide_product_name
+        entities:
+          - product: "حقيبة"
+      - action: utter_product_available
+
+  - story: thank you flow
     steps:
       - intent: thank_you
       - action: utter_goodbye
 
-  - story: goodbye
+  - story: goodbye flow
     steps:
       - intent: goodbye
       - action: utter_goodbye
